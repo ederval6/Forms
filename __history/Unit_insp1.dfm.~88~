@@ -1,0 +1,727 @@
+﻿object Form_Insp1: TForm_Insp1
+  Left = 0
+  Top = 0
+  BorderIcons = []
+  BorderStyle = bsNone
+  ClientHeight = 678
+  ClientWidth = 1103
+  Color = clMoneyGreen
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1103
+    Height = 60
+    Align = alTop
+    BevelOuter = bvNone
+    Color = clAqua
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 0
+    ExplicitLeft = 1
+    object Label3: TLabel
+      Left = 3
+      Top = 13
+      Width = 321
+      Height = 25
+      Align = alCustom
+      Alignment = taCenter
+      Caption = 'Plano de inspe'#231#227'o - Estagio - 1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Btn_sair: TBitBtn
+      Left = 1067
+      Top = 18
+      Width = 24
+      Height = 25
+      Caption = 'X'
+      TabOrder = 0
+      OnClick = Btn_sairClick
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 60
+    Width = 1103
+    Height = 3
+    Align = alTop
+    BevelOuter = bvNone
+    Color = clInfoText
+    ParentBackground = False
+    TabOrder = 1
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 63
+    Width = 1103
+    Height = 615
+    Align = alClient
+    BevelOuter = bvNone
+    Color = clMoneyGreen
+    ParentBackground = False
+    TabOrder = 2
+    object Panel4: TPanel
+      Left = 0
+      Top = 0
+      Width = 1103
+      Height = 145
+      Align = alTop
+      Color = clMoneyGreen
+      ParentBackground = False
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 882
+        Top = 3
+        Width = 117
+        Height = 16
+        Caption = 'Tipo de problemas'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label2: TLabel
+        Left = 882
+        Top = 96
+        Width = 128
+        Height = 16
+        Caption = 'Niveis de problemas'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label4: TLabel
+        Left = 882
+        Top = 49
+        Width = 152
+        Height = 16
+        Caption = 'Causador do problemas'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label8: TLabel
+        Left = 202
+        Top = 114
+        Width = 311
+        Height = 17
+        Caption = '*OBSERVAR/CHASSIS/BOMBA/PINTURA/SOLDA'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI Black'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Rd_Chassis: TRadioGroup
+        Left = 202
+        Top = 3
+        Width = 114
+        Height = 105
+        Caption = 'Chassis'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Items.Strings = (
+          'Aprovado'
+          'Reprovado')
+        ParentFont = False
+        TabOrder = 0
+      end
+      object Rd_bomba: TRadioGroup
+        Left = 322
+        Top = 6
+        Width = 123
+        Height = 105
+        Caption = 'Bomba defensiva'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Items.Strings = (
+          'Aprovado'
+          'Reprovado')
+        ParentFont = False
+        TabOrder = 1
+      end
+      object Rd_Pintura: TRadioGroup
+        Left = 451
+        Top = 3
+        Width = 103
+        Height = 105
+        Caption = 'Pintura'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Items.Strings = (
+          'Aprovado'
+          'Reprovado')
+        ParentFont = False
+        TabOrder = 2
+      end
+      object Rd_Solda: TRadioGroup
+        Left = 560
+        Top = 3
+        Width = 98
+        Height = 105
+        Caption = 'Solda'
+        Color = clMoneyGreen
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Items.Strings = (
+          'Aprovado'
+          'Reprovado')
+        ParentBackground = False
+        ParentColor = False
+        ParentFont = False
+        TabOrder = 3
+      end
+      object Panel6: TPanel
+        Left = 1
+        Top = 1
+        Width = 195
+        Height = 143
+        Align = alLeft
+        BevelOuter = bvNone
+        Color = clSkyBlue
+        ParentBackground = False
+        TabOrder = 4
+        object Label9: TLabel
+          Left = 2
+          Top = 5
+          Width = 110
+          Height = 18
+          Caption = 'Funcionario ID'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+      end
+      object Cb_Tpoblemas: TDBComboBox
+        Left = 882
+        Top = 22
+        Width = 145
+        Height = 21
+        TabOrder = 5
+      end
+      object Cb_Cproblemas: TDBComboBox
+        Left = 882
+        Top = 69
+        Width = 145
+        Height = 21
+        DataField = 'Insp_Cproblema'
+        TabOrder = 6
+      end
+      object Cb_Nproblemas: TDBComboBox
+        Left = 882
+        Top = 118
+        Width = 145
+        Height = 21
+        DataField = 'Insp_Nproblema'
+        TabOrder = 7
+      end
+    end
+    object Panel5: TPanel
+      Left = 0
+      Top = 145
+      Width = 1103
+      Height = 192
+      Align = alTop
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+      object Label5: TLabel
+        Left = 8
+        Top = 10
+        Width = 117
+        Height = 16
+        Caption = 'Tipo de problemas'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label6: TLabel
+        Left = 154
+        Top = 10
+        Width = 152
+        Height = 16
+        Caption = 'Causador do problemas'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label7: TLabel
+        Left = 328
+        Top = 10
+        Width = 128
+        Height = 16
+        Caption = 'Niveis de problemas'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Descrição: TLabel
+        Left = 8
+        Top = 68
+        Width = 63
+        Height = 16
+        Caption = 'Descri'#231#227'o'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Pnl_imagem: TPanel
+        Left = 830
+        Top = 1
+        Width = 272
+        Height = 190
+        Align = alRight
+        BevelOuter = bvNone
+        Color = clSkyBlue
+        ParentBackground = False
+        TabOrder = 0
+        object DBImage1: TDBImage
+          Left = 0
+          Top = 0
+          Width = 272
+          Height = 190
+          Align = alClient
+          DataSource = DataSource1
+          TabOrder = 0
+        end
+      end
+      object Pnl_porcentagem: TPanel
+        Left = 528
+        Top = 1
+        Width = 302
+        Height = 190
+        Align = alRight
+        BevelOuter = bvNone
+        Color = clLime
+        ParentBackground = False
+        TabOrder = 1
+        object Label11: TLabel
+          Left = 6
+          Top = 7
+          Width = 91
+          Height = 16
+          Caption = 'Itens Pendentes'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label12: TLabel
+          Left = 6
+          Top = 47
+          Width = 111
+          Height = 16
+          Caption = 'Itens retrabalhados'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label13: TLabel
+          Left = 6
+          Top = 79
+          Width = 36
+          Height = 16
+          Caption = 'Status'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label14: TLabel
+          Left = 6
+          Top = 111
+          Width = 29
+          Height = 16
+          Caption = 'Filtro'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Edt_pendente: TEdit
+          Left = 103
+          Top = 5
+          Width = 110
+          Height = 21
+          TabOrder = 0
+        end
+        object Edt_Retrabalhados: TEdit
+          Left = 123
+          Top = 45
+          Width = 92
+          Height = 21
+          TabOrder = 1
+        end
+        object Cb_Filtro: TComboBox
+          Left = 51
+          Top = 112
+          Width = 145
+          Height = 21
+          TabOrder = 2
+          Items.Strings = (
+            'Pendente'
+            'Concluidos'
+            'Retrabalhados')
+        end
+      end
+      object Db_tiposprobelmas: TDBEdit
+        Left = 8
+        Top = 32
+        Width = 121
+        Height = 21
+        DataField = 'Insp_Tproblemas'
+        TabOrder = 2
+      end
+      object Db_causadorproblemas: TDBEdit
+        Left = 154
+        Top = 32
+        Width = 152
+        Height = 21
+        DataField = 'Insp_Cproblema'
+        TabOrder = 3
+      end
+      object Db_niveisproblemas: TDBEdit
+        Left = 328
+        Top = 32
+        Width = 152
+        Height = 21
+        DataField = 'Insp_Nproblema'
+        TabOrder = 4
+      end
+      object Db_descriao: TDBEdit
+        Left = 8
+        Top = 90
+        Width = 409
+        Height = 21
+        DataField = 'Insp_Descricao'
+        TabOrder = 5
+      end
+    end
+    object DBGrid1: TDBGrid
+      Left = 0
+      Top = 389
+      Width = 1103
+      Height = 226
+      Align = alBottom
+      DataSource = DataSource1
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -13
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      OnDrawDataCell = DBGrid1DrawDataCell
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'Codigo'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Insp_Tproblemas'
+          Width = 129
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Insp_Nproblema'
+          Width = 104
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Insp_Cproblema'
+          Width = 130
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Insp_Inspecionado'
+          Width = 134
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Insp_Descricao'
+          Width = 104
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Insp_Quantiade'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Id_Imagem'
+          Visible = True
+        end>
+    end
+    object BtnInserir: TBitBtn
+      Left = 8
+      Top = 358
+      Width = 75
+      Height = 25
+      Caption = 'Inserir'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 3
+      OnClick = BtnInserirClick
+    end
+    object Panel7: TPanel
+      Left = 0
+      Top = 337
+      Width = 1103
+      Height = 4
+      Align = alTop
+      BevelOuter = bvNone
+      Color = clBlack
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 4
+    end
+    object BtnAlterar: TBitBtn
+      Left = 89
+      Top = 360
+      Width = 75
+      Height = 25
+      Caption = 'Alterar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 5
+    end
+    object BtnExcluir: TBitBtn
+      Left = 170
+      Top = 360
+      Width = 75
+      Height = 25
+      Caption = 'Excluir'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 6
+    end
+    object BtnProxima: TBitBtn
+      Left = 1002
+      Top = 358
+      Width = 89
+      Height = 25
+      Caption = 'Pr'#243'ximo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 7
+    end
+    object BtnVoltar: TBitBtn
+      Left = 907
+      Top = 358
+      Width = 89
+      Height = 25
+      Caption = 'Voltar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 8
+    end
+    object BtnLimpar: TBitBtn
+      Left = 251
+      Top = 360
+      Width = 75
+      Height = 25
+      Caption = 'Limpar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 9
+    end
+    object BtnAdicionar: TBitBtn
+      Left = 332
+      Top = 360
+      Width = 109
+      Height = 25
+      Caption = 'Retrabalhados'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 10
+    end
+    object BtnSalvar: TBitBtn
+      Left = 447
+      Top = 358
+      Width = 75
+      Height = 25
+      Caption = 'Salvar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 11
+    end
+    object Btn_Novo: TBitBtn
+      Left = 528
+      Top = 360
+      Width = 75
+      Height = 25
+      Caption = 'Novo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 12
+    end
+  end
+  object DataSource1: TDataSource
+    Left = 680
+    Top = 8
+  end
+  object Qry_Inspeao1: TADOQuery
+    Connection = DM.DMConexao
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      
+        ' select Cod_Inspecao,Id_Imagem, Insp_Tproblemas,Insp_Nproblema,I' +
+        'nsp_Cproblema,Insp_Inspecionado,Insp_Descricao,Insp_Quantiade fr' +
+        'om Inspecao')
+    Left = 768
+    Top = 8
+    object Qry_Inspeao1Cod_Inspecao: TAutoIncField
+      FieldName = 'Cod_Inspecao'
+      KeyFields = 'Cod_Inspecao'
+      ReadOnly = True
+    end
+    object Qry_Inspeao1Insp_Tproblemas: TStringField
+      FieldName = 'Insp_Tproblemas'
+      Size = 50
+    end
+    object Qry_Inspeao1Insp_Nproblema: TStringField
+      FieldName = 'Insp_Nproblema'
+      Size = 50
+    end
+    object Qry_Inspeao1Insp_Cproblema: TStringField
+      FieldName = 'Insp_Cproblema'
+      Size = 50
+    end
+    object Qry_Inspeao1Insp_Inspecionado: TStringField
+      FieldName = 'Insp_Inspecionado'
+      Size = 50
+    end
+    object Qry_Inspeao1Insp_Descricao: TStringField
+      FieldName = 'Insp_Descricao'
+      Size = 50
+    end
+    object Qry_Inspeao1Insp_Quantiade: TIntegerField
+      FieldName = 'Insp_Quantiade'
+    end
+    object Qry_Inspeao1Id_Imagem: TIntegerField
+      FieldName = 'Id_Imagem'
+    end
+  end
+end

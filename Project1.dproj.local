@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/04/03 05:53:45.000.925,=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/04/03 07:39:30.000.712,C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit_loguin.pas=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/04/03 07:39:30.000.712,C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit_loguin.dfm=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/04/03 08:58:57.000.240,=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/04/03 08:59:44.000.338,C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit_Menu.dfm=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/04/03 08:59:44.000.338,C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit_Menu.pas=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/04/03 10:11:49.000.186,C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Project1.dproj=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/04/03 15:15:19.000.534,=C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit1.pas</Transaction>
+    <Transaction>2022/04/03 15:16:09.000.627,C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit_Logado.dfm=C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit1.dfm</Transaction>
+    <Transaction>2022/04/03 15:16:09.000.627,C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit_Logado.pas=C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit1.pas</Transaction>
+    <Transaction>2022/04/03 17:30:05.000.521,=C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit1.pas</Transaction>
+    <Transaction>2022/04/03 17:30:54.000.188,=C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit1.pas</Transaction>
+    <Transaction>2022/04/03 17:32:26.000.504,C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit_insp1.pas=C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit1.pas</Transaction>
+    <Transaction>2022/04/03 17:32:26.000.504,C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit_insp1.dfm=C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit1.dfm</Transaction>
+    <Transaction>2022/05/15 10:03:52.000.502,=C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit1.pas</Transaction>
+    <Transaction>2022/05/15 10:06:07.000.115,C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit1.dfm=C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit_DM.dfm</Transaction>
+    <Transaction>2022/05/15 10:06:07.000.115,C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit1.pas=C:\Users\Usuario\Desktop\DELPHI-PROJETO\Forms\Unit_DM.pas</Transaction>
+    <Transaction>2022/08/03 19:13:58.000.612,=D:\DELPHI-PROJETO\Forms\Unit1.pas</Transaction>
+    <Transaction>2022/08/03 19:15:04.000.077,D:\DELPHI-PROJETO\Forms\Unit1.dfm=D:\DELPHI-PROJETO\Forms\Unit_Historico.dfm</Transaction>
+    <Transaction>2022/08/03 19:15:04.000.077,D:\DELPHI-PROJETO\Forms\Unit1.pas=D:\DELPHI-PROJETO\Forms\Unit_Historico.pas</Transaction>
+    <Transaction>2022/08/06 12:01:54.000.223,=D:\DELPHI-PROJETO\Forms\Unit1.pas</Transaction>
+    <Transaction>2022/08/06 12:06:50.000.981,=D:\DELPHI-PROJETO\Forms\Unit1.pas</Transaction>
+    <Transaction>2022/08/06 12:08:54.000.714,=D:\DELPHI-PROJETO\Forms\Unit1.pas</Transaction>
+    <Transaction>2022/08/06 12:10:02.000.284,D:\DELPHI-PROJETO\Forms\Unit1.pas=D:\DELPHI-PROJETO\Forms\UfunacaoCriptografia.pas</Transaction>
+    <Transaction>2022/08/06 12:11:32.000.392,=D:\DELPHI-PROJETO\Forms\Unit1.pas</Transaction>
+    <Transaction>2022/08/06 12:31:59.000.146,=D:\DELPHI-PROJETO\Forms\Unit1.pas</Transaction>
+    <Transaction>2022/08/06 13:08:38.000.296,D:\DELPHI-PROJETO\Forms\Unit1.dfm=D:\DELPHI-PROJETO\Forms\Unit_cadastroUsuario.dfm</Transaction>
+    <Transaction>2022/08/06 13:08:38.000.296,D:\DELPHI-PROJETO\Forms\Unit1.pas=D:\DELPHI-PROJETO\Forms\Unit_cadastroUsuario.pas</Transaction>
+  </Transactions>
+</BorlandProject>

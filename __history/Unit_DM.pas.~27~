@@ -1,0 +1,60 @@
+unit Unit_DM;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, Data.Win.ADODB, Datasnap.DBClient,
+  Datasnap.Provider;
+
+type
+  TDM = class(TDataModule)
+    DMConexao: TADOConnection;
+    ADO_Inspecao: TADOQuery;
+    ADO_InspecaoCod_Inspecao: TAutoIncField;
+    ADO_InspecaoInsp_Tproblemas: TStringField;
+    ADO_InspecaoInsp_Nproblema: TStringField;
+    ADO_InspecaoInsp_Cproblema: TStringField;
+    ADO_InspecaoInsp_Inspecionado: TStringField;
+    ADO_InspecaoInsp_Descricao: TStringField;
+    ADO_InspecaoInsp_checar: TStringField;
+    ADO_InspecaoInsp_Quantiade: TIntegerField;
+    ADO_InspecaoImag_descricao: TStringField;
+    ADO_LOGADO: TADOQuery;
+    ADO_LOGADOl_lote: TIntegerField;
+    ADO_LOGADOM_descricao: TStringField;
+    Dts_Historico: TDataSource;
+    Ado_Historico: TADOQuery;
+    Ado_HistoricoID_func: TIntegerField;
+    Ado_HistoricoID_Modelo: TIntegerField;
+    Ado_HistoricoI_DataInicial: TWideStringField;
+    Ado_HistoricoI_Checar: TStringField;
+    Ado_HistoricoI_Finalizar: TStringField;
+    Ado_Loguin: TADOQuery;
+    Ado_LoguinNome: TStringField;
+    Ado_LoguinSenha: TIntegerField;
+    procedure ADO_InspecaoBeforeInsert(DataSet: TDataSet);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DM: TDM;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses Unit_insp1, Unit_Logado, Unit_loguin, Unit_Menu, Unit_Historico;
+
+{$R *.dfm}
+
+procedure TDM.ADO_InspecaoBeforeInsert(DataSet: TDataSet);
+begin
+//DM.ADO_Inspecao.Last;
+
+
+end;
+
+end.

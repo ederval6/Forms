@@ -1,0 +1,298 @@
+object UFrm_Historico: TUFrm_Historico
+  Left = 0
+  Top = 0
+  Caption = 'Frm_Historico'
+  ClientHeight = 711
+  ClientWidth = 1234
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Pnl_1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1234
+    Height = 41
+    Align = alTop
+    Caption = 'HIST'#211'RICO'
+    Color = clTeal
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Arial Black'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 0
+    ExplicitLeft = 176
+    ExplicitWidth = 185
+  end
+  object Pnl_Central: TPanel
+    Left = 0
+    Top = 41
+    Width = 1234
+    Height = 670
+    Align = alClient
+    Color = clGradientActiveCaption
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Black'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 1
+    ExplicitTop = 47
+    object Label1: TLabel
+      Left = 24
+      Top = 24
+      Width = 62
+      Height = 15
+      Caption = 'Cod_inicio'
+      FocusControl = DBEdit1
+    end
+    object Label2: TLabel
+      Left = 336
+      Top = 24
+      Width = 73
+      Height = 15
+      Caption = 'I_horaInicial'
+      FocusControl = DBEdit2
+    end
+    object Label3: TLabel
+      Left = 568
+      Top = 24
+      Width = 75
+      Height = 15
+      Caption = 'I_DataInicial'
+      FocusControl = DBEdit3
+    end
+    object Label4: TLabel
+      Left = 185
+      Top = 24
+      Width = 33
+      Height = 15
+      Caption = 'l_lote'
+      FocusControl = DBEdit4
+    end
+    object Label5: TLabel
+      Left = 24
+      Top = 112
+      Width = 52
+      Height = 15
+      Caption = 'I_Checar'
+      FocusControl = DBEdit5
+    end
+    object Label6: TLabel
+      Left = 24
+      Top = 168
+      Width = 61
+      Height = 15
+      Caption = 'I_Finalizar'
+      FocusControl = DBEdit6
+    end
+    object Label7: TLabel
+      Left = 472
+      Top = 72
+      Width = 49
+      Height = 15
+      Caption = 'I_Status'
+      FocusControl = DBEdit7
+    end
+    object Label8: TLabel
+      Left = 24
+      Top = 285
+      Width = 77
+      Height = 15
+      Caption = 'I_Quantidade'
+      FocusControl = DBEdit8
+    end
+    object Label9: TLabel
+      Left = 24
+      Top = 232
+      Width = 65
+      Height = 15
+      Caption = 'I_Historico'
+      FocusControl = DBEdit9
+    end
+    object Label10: TLabel
+      Left = 24
+      Top = 67
+      Width = 44
+      Height = 15
+      Caption = 'ID_func'
+      FocusControl = DBEdit10
+    end
+    object Label11: TLabel
+      Left = 284
+      Top = 173
+      Width = 61
+      Height = 15
+      Caption = 'ID_Modelo'
+      FocusControl = DBEdit11
+    end
+    object DBGrid1: TDBGrid
+      Left = 1
+      Top = 376
+      Width = 1232
+      Height = 293
+      Align = alBottom
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Arial Black'
+      TitleFont.Style = []
+    end
+    object Btn_Inserir: TBitBtn
+      Left = 4
+      Top = 341
+      Width = 75
+      Height = 27
+      Caption = 'Inserir'
+      TabOrder = 1
+    end
+    object Btn_Gravar: TBitBtn
+      Left = 85
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Gravar'
+      TabOrder = 2
+    end
+    object Btn_Alterar: TBitBtn
+      Left = 166
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Alterar'
+      TabOrder = 3
+    end
+    object Btn_Excluir: TBitBtn
+      Left = 247
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Excluir'
+      TabOrder = 4
+    end
+    object Btn_Sair: TBitBtn
+      Left = 328
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Sair'
+      TabOrder = 5
+    end
+    object DBEdit1: TDBEdit
+      Left = 24
+      Top = 40
+      Width = 134
+      Height = 23
+      DataField = 'Cod_inicio'
+      DataSource = DataSource1
+      TabOrder = 6
+    end
+    object DBEdit2: TDBEdit
+      Left = 336
+      Top = 40
+      Width = 212
+      Height = 23
+      DataField = 'I_horaInicial'
+      DataSource = DataSource1
+      TabOrder = 7
+    end
+    object DBEdit3: TDBEdit
+      Left = 568
+      Top = 40
+      Width = 134
+      Height = 23
+      DataField = 'I_DataInicial'
+      DataSource = DataSource1
+      TabOrder = 8
+    end
+    object DBEdit4: TDBEdit
+      Left = 185
+      Top = 40
+      Width = 134
+      Height = 23
+      DataField = 'l_lote'
+      DataSource = DataSource1
+      TabOrder = 9
+    end
+    object DBEdit5: TDBEdit
+      Left = 24
+      Top = 128
+      Width = 394
+      Height = 23
+      DataField = 'I_Checar'
+      DataSource = DataSource1
+      TabOrder = 10
+    end
+    object DBEdit6: TDBEdit
+      Left = 24
+      Top = 189
+      Width = 200
+      Height = 23
+      DataField = 'I_Finalizar'
+      DataSource = DataSource1
+      TabOrder = 11
+    end
+    object DBEdit7: TDBEdit
+      Left = 472
+      Top = 88
+      Width = 17
+      Height = 23
+      DataField = 'I_Status'
+      DataSource = DataSource1
+      TabOrder = 12
+    end
+    object DBEdit8: TDBEdit
+      Left = 23
+      Top = 304
+      Width = 134
+      Height = 23
+      DataField = 'I_Quantidade'
+      DataSource = DataSource1
+      TabOrder = 13
+    end
+    object DBEdit9: TDBEdit
+      Left = 24
+      Top = 253
+      Width = 200
+      Height = 23
+      DataField = 'I_Historico'
+      DataSource = DataSource1
+      TabOrder = 14
+    end
+    object DBEdit10: TDBEdit
+      Left = 24
+      Top = 83
+      Width = 134
+      Height = 23
+      DataField = 'ID_func'
+      DataSource = DataSource1
+      TabOrder = 15
+    end
+    object DBEdit11: TDBEdit
+      Left = 284
+      Top = 189
+      Width = 134
+      Height = 23
+      DataField = 'ID_Modelo'
+      DataSource = DataSource1
+      TabOrder = 16
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = DM.Ado_Historico
+    Left = 608
+    Top = 360
+  end
+end

@@ -1,0 +1,325 @@
+object UFrm_Historico: TUFrm_Historico
+  Left = 0
+  Top = 0
+  Align = alClient
+  Caption = 'Frm_Historico'
+  ClientHeight = 711
+  ClientWidth = 1234
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Pnl_1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1234
+    Height = 41
+    Align = alTop
+    Caption = 'HIST'#211'RICO'
+    Color = clTeal
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Arial Black'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Pnl_Central: TPanel
+    Left = 0
+    Top = 41
+    Width = 1234
+    Height = 670
+    Align = alClient
+    Color = clGradientActiveCaption
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Black'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 1
+    ExplicitTop = 47
+    object Label1: TLabel
+      Left = 24
+      Top = 24
+      Width = 71
+      Height = 15
+      Caption = 'Cod_Modelo'
+      FocusControl = Edt_CodModelo
+    end
+    object Label2: TLabel
+      Left = 176
+      Top = 24
+      Width = 54
+      Height = 15
+      Caption = 'Cod_func'
+      FocusControl = Edt_CodFunc
+    end
+    object Label3: TLabel
+      Left = 328
+      Top = 24
+      Width = 35
+      Height = 15
+      Caption = 'Cargo'
+      FocusControl = Edt_Cargo
+    end
+    object Label4: TLabel
+      Left = 311
+      Top = 72
+      Width = 74
+      Height = 15
+      Caption = 'M_descricao'
+      FocusControl = Edt_ModDecr
+    end
+    object Label5: TLabel
+      Left = 24
+      Top = 72
+      Width = 34
+      Height = 15
+      Caption = 'Nome'
+      FocusControl = Edt_Nome
+    end
+    object Label6: TLabel
+      Left = 496
+      Top = 27
+      Width = 75
+      Height = 15
+      Caption = 'I_DataInicial'
+      FocusControl = Edt_Data
+    end
+    object Label7: TLabel
+      Left = 24
+      Top = 144
+      Width = 61
+      Height = 15
+      Caption = 'I_Finalizar'
+      FocusControl = Edt_Finalizar
+    end
+    object Label8: TLabel
+      Left = 24
+      Top = 192
+      Width = 65
+      Height = 15
+      Caption = 'I_Historico'
+      FocusControl = Edt_Historico
+    end
+    object Label9: TLabel
+      Left = 656
+      Top = 27
+      Width = 73
+      Height = 15
+      Caption = 'I_horaInicial'
+      FocusControl = Edt_Hora
+    end
+    object DBGrid1: TDBGrid
+      Left = 1
+      Top = 376
+      Width = 1232
+      Height = 293
+      Align = alBottom
+      DataSource = Ds_Historico
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Arial Black'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'Cod_Modelo'
+          Title.Caption = 'Codigo  Modelo'
+          Width = 116
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Cod_func'
+          Title.Caption = 'Codigo funcion'#225'rio'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Cargo'
+          Width = 87
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'M_descricao'
+          Title.Caption = 'Modelo descricao'
+          Width = 159
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Nome'
+          Width = 177
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'I_DataInicial'
+          Title.Caption = 'Data Inicial'
+          Width = 120
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'I_Finalizar'
+          Title.Caption = 'Finalizadas'
+          Width = 150
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'I_Historico'
+          Title.Caption = 'Historico'
+          Width = 150
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'I_horaInicial'
+          Title.Caption = 'hora Inicial'
+          Visible = True
+        end>
+    end
+    object Btn_Inserir: TBitBtn
+      Left = 4
+      Top = 343
+      Width = 75
+      Height = 27
+      Caption = 'Inserir'
+      TabOrder = 1
+    end
+    object Btn_Gravar: TBitBtn
+      Left = 85
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Gravar'
+      TabOrder = 2
+    end
+    object Btn_Alterar: TBitBtn
+      Left = 166
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Alterar'
+      TabOrder = 3
+    end
+    object Btn_Excluir: TBitBtn
+      Left = 247
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Excluir'
+      TabOrder = 4
+    end
+    object Btn_Sair: TBitBtn
+      Left = 328
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Sair'
+      TabOrder = 5
+    end
+    object Edt_CodModelo: TDBEdit
+      Left = 24
+      Top = 40
+      Width = 134
+      Height = 23
+      DataField = 'Cod_Modelo'
+      DataSource = Ds_Historico
+      TabOrder = 6
+    end
+    object Edt_CodFunc: TDBEdit
+      Left = 176
+      Top = 40
+      Width = 134
+      Height = 23
+      DataField = 'Cod_func'
+      DataSource = Ds_Historico
+      TabOrder = 7
+    end
+    object Edt_Cargo: TDBEdit
+      Left = 327
+      Top = 43
+      Width = 122
+      Height = 23
+      DataField = 'Cargo'
+      DataSource = Ds_Historico
+      TabOrder = 8
+    end
+    object Edt_ModDecr: TDBEdit
+      Left = 311
+      Top = 93
+      Width = 217
+      Height = 23
+      DataField = 'M_descricao'
+      DataSource = Ds_Historico
+      TabOrder = 9
+    end
+    object Edt_Nome: TDBEdit
+      Left = 24
+      Top = 93
+      Width = 206
+      Height = 23
+      DataField = 'Nome'
+      DataSource = Ds_Historico
+      TabOrder = 10
+    end
+    object Edt_Data: TDBEdit
+      Left = 496
+      Top = 43
+      Width = 134
+      Height = 23
+      DataField = 'I_DataInicial'
+      DataSource = Ds_Historico
+      TabOrder = 11
+    end
+    object Edt_Finalizar: TDBEdit
+      Left = 24
+      Top = 160
+      Width = 500
+      Height = 23
+      DataField = 'I_Finalizar'
+      DataSource = Ds_Historico
+      TabOrder = 12
+    end
+    object Edt_Historico: TDBEdit
+      Left = 24
+      Top = 208
+      Width = 500
+      Height = 23
+      DataField = 'I_Historico'
+      DataSource = Ds_Historico
+      TabOrder = 13
+    end
+    object Edt_Hora: TDBEdit
+      Left = 656
+      Top = 43
+      Width = 212
+      Height = 23
+      DataField = 'I_horaInicial'
+      DataSource = Ds_Historico
+      TabOrder = 14
+    end
+  end
+  object Ds_Historico: TDataSource
+    DataSet = DM.Ado_Historico
+    Left = 608
+    Top = 360
+  end
+end

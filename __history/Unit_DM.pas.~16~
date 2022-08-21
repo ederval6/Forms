@@ -1,0 +1,52 @@
+unit Unit_DM;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, Data.Win.ADODB, Datasnap.DBClient,
+  Datasnap.Provider;
+
+type
+  TDM = class(TDataModule)
+    DMConexao: TADOConnection;
+    ADO_Inspecao: TADOQuery;
+    ADO_InspecaoCod_Inspecao: TAutoIncField;
+    ADO_InspecaoInsp_Tproblemas: TStringField;
+    ADO_InspecaoInsp_Nproblema: TStringField;
+    ADO_InspecaoInsp_Cproblema: TStringField;
+    ADO_InspecaoInsp_Inspecionado: TStringField;
+    ADO_InspecaoInsp_Descricao: TStringField;
+    ADO_InspecaoInsp_checar: TStringField;
+    ADO_InspecaoInsp_Quantiade: TIntegerField;
+    ADO_InspecaoImag_descricao: TStringField;
+    ADO_InspecaoInsp_imagens: TIntegerField;
+    ClientDataSet1: TClientDataSet;
+    DataSetProvider1: TDataSetProvider;
+    ClientDataSet1Cod_Inspecao: TAutoIncField;
+    ClientDataSet1Insp_Tproblemas: TStringField;
+    ClientDataSet1Insp_Nproblema: TStringField;
+    ClientDataSet1Insp_Cproblema: TStringField;
+    ClientDataSet1Insp_Inspecionado: TStringField;
+    ClientDataSet1Insp_Descricao: TStringField;
+    ClientDataSet1Insp_checar: TStringField;
+    ClientDataSet1Insp_Quantiade: TIntegerField;
+    ClientDataSet1Imag_descricao: TStringField;
+    ClientDataSet1Insp_imagens: TIntegerField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DM: TDM;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses Unit_insp1, Unit_Logado, Unit_loguin, Unit_Menu;
+
+{$R *.dfm}
+
+end.

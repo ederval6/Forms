@@ -1,0 +1,386 @@
+object Form_Insp1: TForm_Insp1
+  Left = 0
+  Top = 0
+  BorderIcons = []
+  BorderStyle = bsNone
+  ClientHeight = 678
+  ClientWidth = 1103
+  Color = clMoneyGreen
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1103
+    Height = 678
+    Align = alClient
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 10
+      Top = 89
+      Width = 61
+      Height = 13
+      Caption = 'ID_Inspec'#227'o'
+      FocusControl = Edt_insp_cod
+    end
+    object Label2: TLabel
+      Left = 776
+      Top = 397
+      Width = 55
+      Height = 13
+      Caption = 'ID_Imagem'
+      FocusControl = DBEdit2
+    end
+    object Label5: TLabel
+      Left = 168
+      Top = 88
+      Width = 92
+      Height = 13
+      Caption = 'Tipos de problemas'
+    end
+    object Label6: TLabel
+      Left = 168
+      Top = 137
+      Width = 100
+      Height = 13
+      Caption = 'Niveis dos problemas'
+    end
+    object Label7: TLabel
+      Left = 168
+      Top = 193
+      Width = 122
+      Height = 13
+      Caption = 'Criticidade dos problemas'
+    end
+    object Label9: TLabel
+      Left = 10
+      Top = 244
+      Width = 64
+      Height = 13
+      Caption = 'Inspecionado'
+      FocusControl = Edt_Inspecionado
+    end
+    object Label10: TLabel
+      Left = 10
+      Top = 292
+      Width = 50
+      Height = 13
+      Caption = 'Quantiade'
+      FocusControl = Edt_Quantidade
+    end
+    object Label12: TLabel
+      Left = 10
+      Top = 348
+      Width = 46
+      Height = 13
+      Caption = 'Descri'#231#227'o'
+      FocusControl = Edt_Descricao
+    end
+    object Label3: TLabel
+      Left = 10
+      Top = 168
+      Width = 54
+      Height = 13
+      Caption = 'Id_Imagem'
+      FocusControl = DBEdit1
+    end
+    object Edt_insp_cod: TDBEdit
+      Left = 10
+      Top = 108
+      Width = 134
+      Height = 21
+      DataField = 'Cod_Inspecao'
+      DataSource = Dts_Inspecao
+      TabOrder = 0
+    end
+    object DBEdit2: TDBEdit
+      Left = 776
+      Top = 413
+      Width = 297
+      Height = 21
+      DataField = 'Id_Imagem'
+      DataSource = Dts_Inspecao
+      TabOrder = 1
+      OnChange = DBEdit2Change
+    end
+    object Edt_Inspecionado: TDBEdit
+      Left = 10
+      Top = 263
+      Width = 654
+      Height = 21
+      DataField = 'Insp_Inspecionado'
+      DataSource = Dts_Inspecao
+      TabOrder = 2
+    end
+    object Edt_Quantidade: TDBEdit
+      Left = 10
+      Top = 311
+      Width = 134
+      Height = 21
+      DataField = 'Insp_Quantiade'
+      DataSource = Dts_Inspecao
+      TabOrder = 3
+    end
+    object Edt_Descricao: TDBEdit
+      Left = 10
+      Top = 367
+      Width = 654
+      Height = 21
+      DataField = 'Insp_Descricao'
+      DataSource = Dts_Inspecao
+      TabOrder = 4
+    end
+    object CB_Tproblemas: TDBComboBox
+      Left = 168
+      Top = 107
+      Width = 145
+      Height = 21
+      DataField = 'Insp_Tproblemas'
+      DataSource = Dts_Inspecao
+      Items.Strings = (
+        'Mecanico'
+        'Pintura'
+        'Logistica'
+        'engenharia')
+      TabOrder = 5
+    end
+    object Cb_Niveis: TDBComboBox
+      Left = 168
+      Top = 156
+      Width = 145
+      Height = 21
+      DataField = 'Insp_Nproblema'
+      DataSource = Dts_Inspecao
+      Items.Strings = (
+        'Grave'
+        'M'#233'dio'
+        'Gravissimo'
+        'Baixo')
+      TabOrder = 6
+    end
+    object Cb_Criticidades: TDBComboBox
+      Left = 168
+      Top = 212
+      Width = 145
+      Height = 21
+      DataField = 'Insp_Cproblema'
+      DataSource = Dts_Inspecao
+      Items.Strings = (
+        'xxxxxxx'
+        'kkkkkkkk'
+        'ooooooo')
+      TabOrder = 7
+    end
+    object DB_listar: TDBGrid
+      Left = 10
+      Top = 512
+      Width = 1093
+      Height = 142
+      Align = alCustom
+      DataSource = Dts_Inspecao
+      TabOrder = 8
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'Codigo'
+          Width = 49
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Imagem'
+          Width = 72
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Tipos de problemas'
+          Width = 114
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Niveis de problemas'
+          Width = 117
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Criticidade de problema'
+          Width = 138
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Checar'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Inspecionados'
+          Width = 81
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Quantiade'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Descric'#227'o'
+          Visible = True
+        end>
+    end
+    object Panel2: TPanel
+      Left = 776
+      Top = 0
+      Width = 327
+      Height = 331
+      TabOrder = 9
+      object Img_form: TImage
+        Left = 1
+        Top = 1
+        Width = 325
+        Height = 329
+        Align = alClient
+        ExplicitLeft = 96
+        ExplicitTop = 130
+        ExplicitWidth = 105
+        ExplicitHeight = 105
+      end
+    end
+    object Btn_Salvar: TBitBtn
+      Left = 8
+      Top = 465
+      Width = 75
+      Height = 25
+      Caption = 'Salvar'
+      TabOrder = 10
+      OnClick = Btn_SalvarClick
+    end
+    object Btn_Alterar: TBitBtn
+      Left = 89
+      Top = 465
+      Width = 75
+      Height = 25
+      Caption = 'Alterar'
+      TabOrder = 11
+      OnClick = Btn_AlterarClick
+    end
+    object Btn_Excluir: TBitBtn
+      Left = 170
+      Top = 465
+      Width = 75
+      Height = 25
+      Caption = 'Excluir'
+      TabOrder = 12
+    end
+    object Btn_Inserir: TBitBtn
+      Left = 251
+      Top = 465
+      Width = 75
+      Height = 25
+      Caption = 'Inserir'
+      TabOrder = 13
+      OnClick = Btn_InserirClick
+    end
+    object Btn_Novo: TBitBtn
+      Left = 332
+      Top = 465
+      Width = 75
+      Height = 25
+      Caption = 'Novo'
+      TabOrder = 14
+      OnClick = Btn_NovoClick
+    end
+    object Btn_Imaem: TBitBtn
+      Left = 776
+      Top = 440
+      Width = 75
+      Height = 25
+      Caption = 'Imaem'
+      TabOrder = 15
+      OnClick = Btn_ImaemClick
+    end
+    object DBEdit1: TDBEdit
+      Left = 10
+      Top = 187
+      Width = 134
+      Height = 21
+      DataField = 'Id_Imagem'
+      DataSource = Dts_Inspecao
+      TabOrder = 16
+    end
+  end
+  object Dts_Inspecao: TDataSource
+    DataSet = ADO_Inspecao
+    Left = 688
+    Top = 15
+  end
+  object ADO_Inspecao: TADOQuery
+    Connection = DM.DMConexao
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      
+        'Select Cod_Inspecao,Insp_Tproblemas,Insp_Nproblema,Insp_Cproblem' +
+        'a,Insp_Inspecionado,Insp_Descricao,'
+      '  Insp_Checar,Insp_Quantiade,Id_Imagem from Inspecao')
+    Left = 710
+    Top = 89
+    object ADO_InspecaoCod_Inspecao: TAutoIncField
+      FieldName = 'Cod_Inspecao'
+      ReadOnly = True
+    end
+    object ADO_InspecaoInsp_Tproblemas: TStringField
+      FieldName = 'Insp_Tproblemas'
+      Size = 50
+    end
+    object ADO_InspecaoInsp_Nproblema: TStringField
+      FieldName = 'Insp_Nproblema'
+      Size = 50
+    end
+    object ADO_InspecaoInsp_Cproblema: TStringField
+      FieldName = 'Insp_Cproblema'
+      Size = 50
+    end
+    object ADO_InspecaoInsp_Inspecionado: TStringField
+      FieldName = 'Insp_Inspecionado'
+      Size = 50
+    end
+    object ADO_InspecaoInsp_Descricao: TStringField
+      FieldName = 'Insp_Descricao'
+      Size = 50
+    end
+    object ADO_InspecaoInsp_Checar: TStringField
+      FieldName = 'Insp_Checar'
+      FixedChar = True
+      Size = 1
+    end
+    object ADO_InspecaoInsp_Quantiade: TIntegerField
+      FieldName = 'Insp_Quantiade'
+    end
+    object ADO_InspecaoId_Imagem: TIntegerField
+      FieldName = 'Id_Imagem'
+    end
+  end
+  object Open_img: TOpenDialog
+    Left = 688
+    Top = 168
+  end
+end

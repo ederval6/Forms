@@ -1,0 +1,26 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 328
+  Width = 215
+  object DMConexao: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
+      'fo=False;Initial Catalog=CheckList;Data Source=DESKTOP-8QDLTH5\S' +
+      'QLEXPRESS'
+    LoginPrompt = False
+    Provider = 'SQLOLEDB.1'
+    Left = 56
+    Top = 40
+  end
+  object Qry_Inspeao1: TADOQuery
+    Connection = DMConexao
+    CursorType = ctStatic
+    DataSource = Form_Insp1.DataSource1
+    Parameters = <>
+    SQL.Strings = (
+      ' select* from Inspecao')
+    Left = 56
+    Top = 208
+  end
+end

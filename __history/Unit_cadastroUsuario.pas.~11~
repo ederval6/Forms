@@ -1,0 +1,100 @@
+unit Unit_cadastroUsuario;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.Grids, Vcl.DBGrids, Vcl.Mask, Vcl.DBCtrls, Data.Win.ADODB, Vcl.ExtCtrls;
+
+type
+  TFrmCadusuario = class(TForm)
+    Pnl_cadastro: TPanel;
+    Pnl_titulo_cad: TPanel;
+    Btn_Alterar: TBitBtn;
+    Btn_Gravar: TBitBtn;
+    Btn_Cancelar: TBitBtn;
+    Btn_Novo: TBitBtn;
+    Btn_Apagar: TBitBtn;
+    Btn_Fechar: TBitBtn;
+    DBGrid1: TDBGrid;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Edt_Codigo: TDBEdit;
+    Edt_nome: TDBEdit;
+    Edt_cargo: TDBEdit;
+    Edt_senha: TDBEdit;
+    DsListagem: TDataSource;
+    procedure FormShow(Sender: TObject);
+    procedure Btn_NovoClick(Sender: TObject);
+    procedure Edt_CodigoChange(Sender: TObject);
+    procedure Btn_FecharClick(Sender: TObject);
+    procedure Btn_GravarClick(Sender: TObject);
+    procedure Btn_ApagarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    function Usuarioexiste(aUsuario:string) :boolean;
+  end;
+
+var
+  FrmCadusuario: TFrmCadusuario;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit_DM, Unit_Menu, Unit_Historico, Unit_insp1, Unit_Logado, Unit_loguin;
+
+procedure TFrmCadusuario.Btn_ApagarClick(Sender: TObject);
+begin
+
+if MessageDlg ('Deseja Excluir Este Registro?', mtConfirmation, [mbYes, mbNo], 0) = mrYes  then
+begin
+
+DM.Qry_Listagem.Delete;
+end;
+end;
+
+procedure TFrmCadusuario.Btn_FecharClick(Sender: TObject);
+begin
+FrmCadusuario.Close;
+end;
+
+procedure TFrmCadusuario.Btn_GravarClick(Sender: TObject);
+begin
+
+
+
+ DM.Qry_Listagem.Post;
+
+
+
+  ShowMessage('Cadastro Gravado com Sucesso!');
+end;
+
+procedure TFrmCadusuario.Btn_NovoClick(Sender: TObject);
+begin
+ DM.Qry_Listagem.append;
+ Edt_nome.SetFocus;
+ Edt_nome.Text:='';
+ Edt_cargo.Text:='';
+ Edt_senha.Text:='';
+
+end;
+
+procedure TFrmCadusuario.Edt_CodigoChange(Sender: TObject);
+begin
+Edt_Codigo.Color:=clYellow;
+end;
+
+procedure TFrmCadusuario.FormShow(Sender: TObject);
+begin
+DM.Qry_Listagem.open;
+
+end;
+
+end.

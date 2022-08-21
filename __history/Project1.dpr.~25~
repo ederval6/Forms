@@ -1,0 +1,28 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  Unit_loguin in 'Unit_loguin.pas' {Form_loguin},
+  Unit_Menu in 'Unit_Menu.pas' {Form_Menu},
+  Unit_Logado in 'Unit_Logado.pas' {Form_Logado},
+  Unit_insp1 in 'Unit_insp1.pas' {Form_Insp1},
+  Unit_DM in 'Unit_DM.pas' {DM: TDataModule},
+  Vcl.Themes,
+  Vcl.Styles,
+  Unit_Historico in 'Unit_Historico.pas' {UFrm_Historico},
+  Unit_cadastroUsuario in 'Unit_cadastroUsuario.pas' {FrmCadusuario};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmCadusuario, FrmCadusuario);
+  Application.CreateForm(TUFrm_Historico, UFrm_Historico);
+  Application.CreateForm(TForm_Menu, Form_Menu);
+  Application.CreateForm(TForm_loguin, Form_loguin);
+  Application.CreateForm(TForm_Insp1, Form_Insp1);
+  Application.CreateForm(TDM, DM);
+  Application.CreateForm(TForm_Logado, Form_Logado);
+  Application.Run;
+end.

@@ -1,0 +1,417 @@
+object UFrm_Historico: TUFrm_Historico
+  Left = 0
+  Top = 0
+  Align = alClient
+  BorderIcons = []
+  Caption = 'Frm_Historico'
+  ClientHeight = 711
+  ClientWidth = 1234
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Pnl_1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1234
+    Height = 41
+    Align = alTop
+    Caption = 'HIST'#211'RICO'
+    Color = clTeal
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Arial Black'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 0
+    object Btn_Fechar: TBitBtn
+      Left = 1198
+      Top = 10
+      Width = 27
+      Height = 25
+      Glyph.Data = {
+        F6060000424DF606000000000000360000002800000018000000180000000100
+        180000000000C0060000120B0000120B00000000000000000000FF00FFFF00FF
+        FF00FFFF00FFFF00FFFF00FFFF00FFFF00FF00008200008200018600058E0005
+        8E000186000082000082FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+        00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF00008200058E010F9F021BAF
+        021DB1021DB1021DB1021DB1021BAF010F9F00058E000082FF00FFFF00FFFF00
+        FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF0000820002880114A502
+        1DB1021DB1021DB1021DB1021DB1021DB1021DB1021DB1021DB1021DB10114A5
+        000288000082FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF0000820006
+        91021BB5021DB5021DB1021DB1021DB1021DB1021DB1021DB1021DB1021DB102
+        1DB1021DB1021DB1021BAF000691000082FF00FFFF00FFFF00FFFF00FFFF00FF
+        000082000692021EC2021EC1021DBB021DB6021DB1021DB1021DB1021DB1021D
+        B1021DB1021DB1021DB1021DB1021DB1021DB1021DB1000691000082FF00FFFF
+        00FFFF00FFFF00FF000288011CCB011ECF021EC9021EC2021DBC021DB7021DB2
+        021DB1021DB1021DB1021DB1021DB1021DB1021DB1021DB1021DB1021DB1021B
+        AF000288FF00FFFF00FFFF00FF0000820115BD011FDC011ED5011ED0001BC907
+        26C72F4DCF011BB7011CB2021DB1021DB1021CB10018AF2744C20F2DB80018AF
+        021DB1021DB1021DB10114A5000082FF00FFFF00FF000593011FE6011FE3011F
+        DD011ED80723D39FB0EFFEFEFF657DDD0016B7011BB4021CB10014AC4460CBF7
+        F8FCC0CAEF112DB8021DB1021DB1021DB1021DB100058EFF00FF0000820111BC
+        011FF2011FEB011FE5011FDE1131DDEAEEFCFFFFFFFFFFFF647DDE0016B80013
+        B1445FCBF7F8FEFFFFFFFFFFFF2C49C4021DB1021DB1021DB1021DB1010F9F00
+        0082000082011CE2011FF8011FF3011FED011FE60019DE2949E3E5E9FBFFFFFF
+        FFFFFF5670DA3E5AD1F7F8FEFFFFFFFBFBFE4C67CE0018AF021DB1021DB1021D
+        B1021DB1021BAF0000820001870221EF0323FA0121FA011FF4011FEE011FE700
+        16DE2848E3E3E9FCFFFFFFFCFCFFFBFBFFFFFFFFFAFAFE4C67CF0015AC011CB1
+        021DB1021DB1021DB1021DB1021DB10001860005970729FA0F31FA0425FA011F
+        FA011FF6011FEF011FE90015E02243E5E2E7FCFFFFFFFFFFFFF6F7FE4462D500
+        13B5021CB2021DB1021DB1021DB1021DB1021DB1021DB100058E0005981135FA
+        2D4FFB1033FA011FFA011FFA011FF7011EF20016EA3857EDE6EBFCFFFFFFFFFF
+        FFF6F7FE5672DD0017BF011CBB021DB5021DB1021DB1021DB1021DB1021DB100
+        058E0001881638F64C6BFC274AFB0222FA011FFA001FFA0017F84262F7F7F8FF
+        FFFFFFF0F3FEE9EDFCFFFFFFFFFFFF647EE10017C0011CBC021DB6021DB2021D
+        B1021DB1021DB1000186000082102FEF5C79FC506EFC0C2DFA011FFA001CFA42
+        63FCF7F8FFFFFFFFFBFBFF3F5DEF2342E7E5E9FCFFFFFFFFFFFF657EE2021CC4
+        021DBD021DB8021DB2021DB1021BAF000082000082071ACB506EFC8299FC2D50
+        FB0323FA1133FAF8FAFFFFFFFFFBFBFF4968FA0017EE0015E62848E9E5E9FCFF
+        FFFFFFFFFF2C4BD7021EC5021EBF021DBA021DB4010F9F000082FF00FF01079E
+        2D4FFB92A6FE768FFC1A3EFB031FFA7991FCEDF0FF4A69FC0017FA001FF7011F
+        F00016E72849EADEE5FB96A7F20723D4021ECC021EC6021EC1021DBA00058EFF
+        00FFFF00FF0000820D26DD5F7BFCADBDFE6F8AFC173AFB0221FA1438FB001CFA
+        001FFA011FFA011FF8011FF30019EB0F31E90323E0001CD9011ED4011ECE021E
+        C70114AD000082FF00FFFF00FFFF00FF0003911B3CF47992FCBFCBFE7F97FC2D
+        4FFB0A2DFA0221FA011FFA011FFA011FFA011FF8011FF4011FEE011FE7011FE1
+        011FDC011ED5011CC6000288FF00FFFF00FFFF00FFFF00FF000082020AA72346
+        FB7D95FCC1CCFEA3B4FE5F7BFC2D4FFB1538FB0A2DFA0628FA0628FA092BFA0D
+        2FF70C2DF00524EA011FE2011ED5000693000082FF00FFFF00FFFF00FFFF00FF
+        FF00FF000082020AA71C3EF46984FCAFBDFEBFCBFEA5B6FE8198FC647FFC516F
+        FC4A69FC4565FB3658FB1A3EF80626F0011CDE000696000082FF00FFFF00FFFF
+        00FFFF00FFFF00FFFF00FFFF00FF0000820003920F28DE3658FB6782FC8AA0FE
+        99ACFE93A7FE8299FC6984FC4767FC2245FB0A2CF70116CE00028B000082FF00
+        FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF00008202
+        08A00A1ECF1839F42346FA284BFB2346FB173AF60A29EB0314C5000598000082
+        FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+        FFFF00FFFF00FFFF00FF00008200008200018900059D00059C00018900008200
+        0082FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
+      TabOrder = 0
+      StyleElements = []
+    end
+  end
+  object Pnl_Central: TPanel
+    Left = 0
+    Top = 41
+    Width = 1234
+    Height = 670
+    Align = alClient
+    Color = clGradientActiveCaption
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Black'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 24
+      Top = 24
+      Width = 71
+      Height = 15
+      Caption = 'Cod_Modelo'
+      FocusControl = Edt_CodModelo
+    end
+    object Label2: TLabel
+      Left = 176
+      Top = 24
+      Width = 54
+      Height = 15
+      Caption = 'Cod_func'
+      FocusControl = Edt_CodFunc
+    end
+    object Label3: TLabel
+      Left = 328
+      Top = 24
+      Width = 35
+      Height = 15
+      Caption = 'Cargo'
+      FocusControl = Edt_Cargo
+    end
+    object Label4: TLabel
+      Left = 311
+      Top = 72
+      Width = 74
+      Height = 15
+      Caption = 'M_descricao'
+      FocusControl = Edt_ModDecr
+    end
+    object Label5: TLabel
+      Left = 24
+      Top = 72
+      Width = 34
+      Height = 15
+      Caption = 'Nome'
+      FocusControl = Edt_Nome
+    end
+    object Label6: TLabel
+      Left = 496
+      Top = 27
+      Width = 75
+      Height = 15
+      Caption = 'I_DataInicial'
+      FocusControl = Edt_Data
+    end
+    object Label7: TLabel
+      Left = 24
+      Top = 144
+      Width = 61
+      Height = 15
+      Caption = 'I_Finalizar'
+      FocusControl = Edt_Finalizar
+    end
+    object Label8: TLabel
+      Left = 24
+      Top = 192
+      Width = 65
+      Height = 15
+      Caption = 'I_Historico'
+      FocusControl = Edt_Historico
+    end
+    object Label9: TLabel
+      Left = 656
+      Top = 27
+      Width = 73
+      Height = 15
+      Caption = 'I_horaInicial'
+      FocusControl = Edt_Hora
+    end
+    object DBGrid1: TDBGrid
+      Left = 1
+      Top = 376
+      Width = 1232
+      Height = 293
+      Align = alBottom
+      DataSource = Ds_Historico
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Arial Black'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'Cod_Modelo'
+          Title.Caption = 'Codigo  Modelo'
+          Width = 116
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Cod_func'
+          Title.Caption = 'Codigo funcion'#225'rio'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Cargo'
+          Width = 87
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'M_descricao'
+          Title.Caption = 'Modelo descricao'
+          Width = 159
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Nome'
+          Width = 177
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'I_DataInicial'
+          Title.Caption = 'Data Inicial'
+          Width = 120
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'I_Finalizar'
+          Title.Caption = 'Finalizadas'
+          Width = 150
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'I_Historico'
+          Title.Caption = 'Historico'
+          Width = 150
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'I_horaInicial'
+          Title.Caption = 'hora Inicial'
+          Visible = True
+        end>
+    end
+    object Btn_Inserir: TBitBtn
+      Left = 4
+      Top = 343
+      Width = 75
+      Height = 27
+      Caption = 'Inserir'
+      TabOrder = 1
+    end
+    object Btn_Gravar: TBitBtn
+      Left = 85
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Gravar'
+      TabOrder = 2
+    end
+    object Btn_Alterar: TBitBtn
+      Left = 166
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Alterar'
+      TabOrder = 3
+    end
+    object Btn_Excluir: TBitBtn
+      Left = 247
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Excluir'
+      TabOrder = 4
+    end
+    object Btn_Sair: TBitBtn
+      Left = 328
+      Top = 343
+      Width = 75
+      Height = 27
+      Caption = 'Sair'
+      Glyph.Data = {
+        36030000424D3603000000000000360000002800000010000000100000000100
+        18000000000000030000120B0000120B00000000000000000000FF00FF244E6E
+        0A6B9BA6B2F19FA4DAA29CBFAD9BAAB69E9EB69E9EB69F9FB69F9FB69F9FB69F
+        9F3C9DBE244E6EFF00FFFF00FF244E6E0A6B9B95AAFC8199FC6F8BFC5D7DFC56
+        72F06272D47A79B899879CAB9090AB90903FA0BF244E6EFF00FFFF00FF244E6E
+        0A6B9B849CFC728DFC607FFC4E71FC3C62FC2A54FC1745FC0A3AFAA08181A081
+        8142A3C1244E6EFF00FFFF00FF244E6E0D6E9D7490FC6282FC5074FC3E64FC2C
+        56FC1A48FC0A3BFC0A34F095727295727245A6C2244E6EFF00FFFF00FF244E6E
+        10719F6684FC5475FC4267FC3059FC1E4AFC0C3CFC0A36F20A2FE58963638963
+        6348A9C4244E6EFF00FFFF00FF244E6E1374A15778FC4569FC335BFC214DFC0F
+        3EFC0A37F40A2FE60A2ADA7E54547E54544BACC6244E6EFF00FFFF00FF244E6E
+        1575A3486CFC365EFC244FFC1240FC0A37F50A31E80A2ADC0A24D07446467446
+        464EAEC8244E6EFF00FFFF00FF244E6E1778A53960FC2751FC1543FC0A38F70A
+        32EA0A2BDE0A7ED80AA0E16A3C3C6B3B3B50B1CA244E6EFF00FFFF00FF244E6E
+        1A7BA72A54FC1744FC0A39F90A33ED0A2CE00A27D30B91EA4DC9F3693D3E6B3B
+        3B53B4CC244E6EFF00FFFF00FF244E6E1D7EA91947FC0A3AFB0A34EF0A2DE30A
+        28D50A21C90A1BBD0A15B06B3B3B6B3B3B56B7CE244E6EFF00FFFF00FF244E6E
+        2081AB0A3BFC0A35F10A2EE40A29D80A22CB0A1CBF0A16B20A0EA56B3B3B6B3B
+        3B59BAD0244E6EFF00FFFF00FF244E6E2384AC0A36F30A2FE60A2ADA0A23CE0A
+        1DC00A15B10A0FA40A0A9B6B3B3B6B3B3B5CBDD1244E6EFF00FFFF00FF244E6E
+        2687AE0A31E80A2ADC0A24D00A1BBE0A13AD0A0EA30A0A9C0A0A9B6B3B3B6B3B
+        3B5EBFD3244E6EFF00FFFF00FF244E6E2989B00A2BDE0A21C90A17B40A11AA0A
+        0EA20A0B9C0A0A9B0A0A9B6B3B3B6B3B3B61C1D5244E6EFF00FFFF00FF244E6E
+        2B8CB23192B53697B93C9CBC3FA0BF45A6C24AABC64FB0C954B5CD59BAD15FBF
+        D363C4D7244E6EFF00FFFF00FF244E6E244E6E244E6E244E6E244E6E244E6E24
+        4E6E244E6E244E6E244E6E244E6E244E6E244E6E244E6EFF00FF}
+      TabOrder = 5
+    end
+    object Edt_CodModelo: TDBEdit
+      Left = 24
+      Top = 40
+      Width = 134
+      Height = 23
+      DataField = 'Cod_Modelo'
+      DataSource = Ds_Historico
+      TabOrder = 6
+    end
+    object Edt_CodFunc: TDBEdit
+      Left = 176
+      Top = 40
+      Width = 134
+      Height = 23
+      DataField = 'Cod_func'
+      DataSource = Ds_Historico
+      TabOrder = 7
+    end
+    object Edt_Cargo: TDBEdit
+      Left = 327
+      Top = 43
+      Width = 122
+      Height = 23
+      DataField = 'Cargo'
+      DataSource = Ds_Historico
+      TabOrder = 8
+    end
+    object Edt_ModDecr: TDBEdit
+      Left = 311
+      Top = 93
+      Width = 217
+      Height = 23
+      DataField = 'M_descricao'
+      DataSource = Ds_Historico
+      TabOrder = 9
+    end
+    object Edt_Nome: TDBEdit
+      Left = 24
+      Top = 93
+      Width = 206
+      Height = 23
+      DataField = 'Nome'
+      DataSource = Ds_Historico
+      TabOrder = 10
+    end
+    object Edt_Data: TDBEdit
+      Left = 496
+      Top = 43
+      Width = 134
+      Height = 23
+      DataField = 'I_DataInicial'
+      DataSource = Ds_Historico
+      TabOrder = 11
+    end
+    object Edt_Finalizar: TDBEdit
+      Left = 24
+      Top = 160
+      Width = 500
+      Height = 23
+      DataField = 'I_Finalizar'
+      DataSource = Ds_Historico
+      TabOrder = 12
+    end
+    object Edt_Historico: TDBEdit
+      Left = 24
+      Top = 208
+      Width = 500
+      Height = 23
+      DataField = 'I_Historico'
+      DataSource = Ds_Historico
+      TabOrder = 13
+    end
+    object Edt_Hora: TDBEdit
+      Left = 656
+      Top = 43
+      Width = 212
+      Height = 23
+      DataField = 'I_horaInicial'
+      DataSource = Ds_Historico
+      TabOrder = 14
+    end
+  end
+  object Ds_Historico: TDataSource
+    DataSet = DM.Ado_Historico
+    Left = 608
+    Top = 360
+  end
+end

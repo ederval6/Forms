@@ -1,0 +1,112 @@
+object UFrm_Historico: TUFrm_Historico
+  Left = 0
+  Top = 0
+  Caption = 'Frm_Historico'
+  ClientHeight = 711
+  ClientWidth = 1234
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Pnl_1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1234
+    Height = 41
+    Align = alTop
+    Caption = 'HIST'#211'RICO'
+    Color = clTeal
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Arial Black'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 0
+    ExplicitLeft = 176
+    ExplicitWidth = 185
+  end
+  object Pnl_Central: TPanel
+    Left = 0
+    Top = 41
+    Width = 1234
+    Height = 670
+    Align = alClient
+    Color = clGradientActiveCaption
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Black'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 1
+    ExplicitLeft = 8
+    ExplicitTop = 65
+    object DBGrid1: TDBGrid
+      Left = 1
+      Top = 376
+      Width = 1232
+      Height = 293
+      Align = alBottom
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Arial Black'
+      TitleFont.Style = []
+    end
+    object Btn_Inserir: TBitBtn
+      Left = 4
+      Top = 341
+      Width = 75
+      Height = 27
+      Caption = 'Inserir'
+      TabOrder = 1
+    end
+    object Btn_Gravar: TBitBtn
+      Left = 85
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Gravar'
+      TabOrder = 2
+    end
+    object Btn_Alterar: TBitBtn
+      Left = 166
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Alterar'
+      TabOrder = 3
+    end
+    object Btn_Excluir: TBitBtn
+      Left = 247
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Excluir'
+      TabOrder = 4
+    end
+    object Btn_Sair: TBitBtn
+      Left = 328
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Sair'
+      TabOrder = 5
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = DM.Ado_Historico
+    Left = 608
+    Top = 360
+  end
+end

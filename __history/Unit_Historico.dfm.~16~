@@ -1,0 +1,243 @@
+object UFrm_Historico: TUFrm_Historico
+  Left = 0
+  Top = 0
+  Caption = 'Frm_Historico'
+  ClientHeight = 711
+  ClientWidth = 1234
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Pnl_1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1234
+    Height = 41
+    Align = alTop
+    Caption = 'HIST'#211'RICO'
+    Color = clTeal
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Arial Black'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 0
+    ExplicitLeft = 176
+    ExplicitWidth = 185
+  end
+  object Pnl_Central: TPanel
+    Left = 0
+    Top = 41
+    Width = 1234
+    Height = 670
+    Align = alClient
+    Color = clGradientActiveCaption
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Black'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 1
+    ExplicitTop = 47
+    object Label1: TLabel
+      Left = 26
+      Top = 24
+      Width = 85
+      Height = 15
+      Caption = 'ID_funcionario'
+      FocusControl = DBEdit1
+    end
+    object Label2: TLabel
+      Left = 188
+      Top = 24
+      Width = 61
+      Height = 15
+      Caption = 'ID_Modelo'
+      FocusControl = DBEdit2
+    end
+    object Label3: TLabel
+      Left = 360
+      Top = 24
+      Width = 65
+      Height = 15
+      Caption = 'DataInicial'
+      FocusControl = DBEdit3
+    end
+    object Label5: TLabel
+      Left = 26
+      Top = 107
+      Width = 39
+      Height = 15
+      Caption = 'Status'
+    end
+    object Label6: TLabel
+      Left = 26
+      Top = 171
+      Width = 51
+      Height = 15
+      Caption = 'Finalizar'
+    end
+    object DBGrid1: TDBGrid
+      Left = 1
+      Top = 376
+      Width = 1232
+      Height = 293
+      Align = alBottom
+      DataSource = Ds_Historico
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Arial Black'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'ID_func'
+          Title.Caption = 'ID_funcionario'
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'ID_Modelo'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'I_DataInicial'
+          Title.Caption = 'DataInicial'
+          Width = 84
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'I_horaInicial'
+          Title.Caption = 'HoraInicial'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'I_Checar'
+          Title.Caption = 'Checar'
+          Width = 76
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'I_Finalizar'
+          Title.Caption = 'Finalizar'
+          Visible = True
+        end>
+    end
+    object Btn_Inserir: TBitBtn
+      Left = 4
+      Top = 341
+      Width = 75
+      Height = 27
+      Caption = 'Inserir'
+      TabOrder = 1
+    end
+    object Btn_Gravar: TBitBtn
+      Left = 85
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Gravar'
+      TabOrder = 2
+    end
+    object Btn_Alterar: TBitBtn
+      Left = 166
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Alterar'
+      TabOrder = 3
+    end
+    object Btn_Excluir: TBitBtn
+      Left = 247
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Excluir'
+      TabOrder = 4
+    end
+    object Btn_Sair: TBitBtn
+      Left = 328
+      Top = 344
+      Width = 75
+      Height = 27
+      Caption = 'Sair'
+      TabOrder = 5
+    end
+    object DBEdit1: TDBEdit
+      Left = 26
+      Top = 40
+      Width = 134
+      Height = 23
+      DataField = 'ID_func'
+      DataSource = Ds_Historico
+      TabOrder = 6
+    end
+    object DBEdit2: TDBEdit
+      Left = 188
+      Top = 40
+      Width = 134
+      Height = 23
+      DataField = 'ID_Modelo'
+      DataSource = Ds_Historico
+      TabOrder = 7
+    end
+    object DBEdit3: TDBEdit
+      Left = 360
+      Top = 40
+      Width = 134
+      Height = 23
+      DataField = 'I_DataInicial'
+      DataSource = Ds_Historico
+      TabOrder = 8
+    end
+    object DB_Finalizar: TDBComboBox
+      Left = 26
+      Top = 192
+      Width = 145
+      Height = 23
+      DataField = 'M_descricao'
+      DataSource = DM.Dts_Historico
+      Items.Strings = (
+        'EM OPERA'#199#195'O'
+        'FINALIZADAS'
+        'CONCLUIDAS'
+        'BLOQUEADAS')
+      TabOrder = 9
+    end
+    object DBComboBox1: TDBComboBox
+      Left = 26
+      Top = 128
+      Width = 145
+      Height = 23
+      DataField = 'I_Checar'
+      DataSource = Ds_Historico
+      Items.Strings = (
+        'Comcluidos'
+        'Pendentes')
+      TabOrder = 10
+    end
+  end
+  object Ds_Historico: TDataSource
+    DataSet = DM.Ado_Historico
+    Left = 608
+    Top = 360
+  end
+end

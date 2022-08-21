@@ -1,0 +1,174 @@
+unit Unit_insp1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Data.DB,
+  Vcl.Buttons, Vcl.Grids, Vcl.DBGrids, Data.Win.ADODB, System.ImageList,
+  Vcl.ImgList, Vcl.Mask, Vcl.DBCtrls, Vcl.ExtDlgs;
+
+type
+  TForm_Insp1 = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Label3: TLabel;
+    Panel3: TPanel;
+    Panel4: TPanel;
+    Rd_Chassis: TRadioGroup;
+    Rd_bomba: TRadioGroup;
+    Rd_Pintura: TRadioGroup;
+    Rd_Solda: TRadioGroup;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label4: TLabel;
+    Panel5: TPanel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Descrição: TLabel;
+    Pnl_imagem: TPanel;
+    DBGrid1: TDBGrid;
+    BtnInserir: TBitBtn;
+    Panel7: TPanel;
+    BtnAlterar: TBitBtn;
+    BtnExcluir: TBitBtn;
+    BtnProxima: TBitBtn;
+    Label8: TLabel;
+    BtnVoltar: TBitBtn;
+    BtnLimpar: TBitBtn;
+    BtnAdicionar: TBitBtn;
+    BtnSalvar: TBitBtn;
+    Pnl_porcentagem: TPanel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Edt_pendente: TEdit;
+    Edt_Retrabalhados: TEdit;
+    Btn_Novo: TBitBtn;
+    Btn_sair: TBitBtn;
+    Label14: TLabel;
+    Cb_Filtro: TComboBox;
+    Db_tiposprobelmas: TDBEdit;
+    Db_causadorproblemas: TDBEdit;
+    Db_niveisproblemas: TDBEdit;
+    Db_descriao: TDBEdit;
+    Panel6: TPanel;
+    Label9: TLabel;
+    Cb_Tpoblemas: TDBComboBox;
+    Cb_Cproblemas: TDBComboBox;
+    Cb_Nproblemas: TDBComboBox;
+    DataSource1: TDataSource;
+    Label10: TLabel;
+    DBEdit1: TDBEdit;
+    Label15: TLabel;
+    Edt_imagem: TDBEdit;
+    Label16: TLabel;
+    DBEdit3: TDBEdit;
+    DBImage1: TDBImage;
+    OpenPictureDialog1: TOpenPictureDialog;
+    qr_imagem: TADOQuery;
+    qr_imagemCod_imagens: TAutoIncField;
+    qr_imagemImag_descricao: TStringField;
+    qr_imagemID_Inspecao: TIntegerField;
+    Qry_Inspeao1l: TADOQuery;
+    Qry_Inspeao1lCod_Inspecao: TAutoIncField;
+    Qry_Inspeao1lInsp_Tproblemas: TStringField;
+    Qry_Inspeao1lInsp_Nproblema: TStringField;
+    Qry_Inspeao1lInsp_Cproblema: TStringField;
+    Qry_Inspeao1lInsp_Inspecionado: TStringField;
+    Qry_Inspeao1lInsp_Descricao: TStringField;
+    Qry_Inspeao1lInsp_Quantiade: TIntegerField;
+    Qry_Inspeao1lId_Imagem: TIntegerField;
+    procedure Btn_sairClick(Sender: TObject);
+    procedure DBGrid1DrawDataCell(Sender: TObject; const Rect: TRect;
+      Field: TField; State: TGridDrawState);
+    procedure BtnInserirClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure BtnSalvarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure BtnAlterarClick(Sender: TObject);
+    procedure DBImage1Enter(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_Insp1: TForm_Insp1;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit_Logado, Unit_loguin, Unit_Menu, Unit_DM;
+
+procedure TForm_Insp1.BtnAlterarClick(Sender: TObject);
+begin
+// Qry_Inspeao1.Edit;
+//Cb_Tpoblemas.Items.Text;
+//Cb_Cproblemas.Items.Text;
+//Cb_Nproblemas.Items.Text;
+end;
+
+procedure TForm_Insp1.BtnInserirClick(Sender: TObject);
+begin
+
+End; // with
+
+
+procedure TForm_Insp1.BtnSalvarClick(Sender: TObject);
+begin
+
+//   Qry_Inspeao1.Post;
+//
+ //Qry_Inspeao1.op
+  //Qry_Inspeao1.Insert;
+end;
+
+procedure TForm_Insp1.Btn_sairClick(Sender: TObject);
+begin
+Close;
+end;
+
+procedure TForm_Insp1.DBGrid1DrawDataCell(Sender: TObject; const Rect: TRect;
+  Field: TField; State: TGridDrawState);
+begin
+
+ begin
+
+    Font.Color:=clRed;
+    Brush.Color:= clBlack;
+ end;
+end;
+
+procedure TForm_Insp1.DBImage1Enter(Sender: TObject);
+begin
+ if  OpenPictureDialog1.Execute=True then
+ BEGIN
+   DBImage1.Picture.LoadFromFile(OpenPictureDialog1.FileName);
+ END;
+
+end;
+
+procedure TForm_Insp1.FormCreate(Sender: TObject);
+begin
+try
+Qry_Inspeao1.Open;
+
+except
+
+ShowMessage('ERRO AO SE CONECTAR COM O BANCO') ;
+close;
+end;
+
+end;
+
+procedure TForm_Insp1.FormShow(Sender: TObject);
+begin
+// Qry_Inspeao1.close;
+//  Qry_Inspeao1.Parameters.ParamByName('Cod_Inspecao').Value := Cod_Inspecao ;
+end;
+
+end.

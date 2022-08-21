@@ -1,0 +1,134 @@
+unit Unit_insp1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Data.DB,
+  Vcl.Buttons, Vcl.Grids, Vcl.DBGrids, Data.Win.ADODB, System.ImageList,
+  Vcl.ImgList, Vcl.Mask, Vcl.DBCtrls;
+
+type
+  TForm_Insp1 = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Label3: TLabel;
+    Panel3: TPanel;
+    Panel4: TPanel;
+    Rd_Chassis: TRadioGroup;
+    Rd_bomba: TRadioGroup;
+    Rd_Pintura: TRadioGroup;
+    Rd_Solda: TRadioGroup;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label4: TLabel;
+    Panel5: TPanel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Descrição: TLabel;
+    Pnl_imagem: TPanel;
+    DBGrid1: TDBGrid;
+    BtnInserir: TBitBtn;
+    Panel7: TPanel;
+    BtnAlterar: TBitBtn;
+    BtnExcluir: TBitBtn;
+    BtnProxima: TBitBtn;
+    Label8: TLabel;
+    BtnVoltar: TBitBtn;
+    BtnLimpar: TBitBtn;
+    BtnAdicionar: TBitBtn;
+    BtnSalvar: TBitBtn;
+    Pnl_porcentagem: TPanel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Edt_pendente: TEdit;
+    Edt_Retrabalhados: TEdit;
+    Btn_Novo: TBitBtn;
+    Btn_sair: TBitBtn;
+    Label14: TLabel;
+    Cb_Filtro: TComboBox;
+    Db_tiposprobelmas: TDBEdit;
+    Db_causadorproblemas: TDBEdit;
+    Db_niveisproblemas: TDBEdit;
+    Db_descriao: TDBEdit;
+    Panel6: TPanel;
+    Label9: TLabel;
+    Cb_Tpoblemas: TDBComboBox;
+    Cb_Cproblemas: TDBComboBox;
+    Cb_Nproblemas: TDBComboBox;
+    DataSource1: TDataSource;
+    Qry_Inspeao1: TADOQuery;
+    Qry_Inspeao1Cod_Inspecao: TAutoIncField;
+    Qry_Inspeao1Insp_Tproblemas: TStringField;
+    Qry_Inspeao1Insp_Nproblema: TStringField;
+    Qry_Inspeao1Insp_Cproblema: TStringField;
+    Qry_Inspeao1Insp_Inspecionado: TStringField;
+    Qry_Inspeao1Insp_Descricao: TStringField;
+    Qry_Inspeao1Insp_Quantiade: TIntegerField;
+    Qry_Inspeao1Id_Imagem: TIntegerField;
+    Label10: TLabel;
+    DBEdit1: TDBEdit;
+    Label15: TLabel;
+    DBEdit2: TDBEdit;
+    Label16: TLabel;
+    DBEdit3: TDBEdit;
+    procedure Btn_sairClick(Sender: TObject);
+    procedure DBGrid1DrawDataCell(Sender: TObject; const Rect: TRect;
+      Field: TField; State: TGridDrawState);
+    procedure BtnInserirClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure BtnSalvarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_Insp1: TForm_Insp1;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit_Logado, Unit_loguin, Unit_Menu, Unit_DM;
+
+procedure TForm_Insp1.BtnInserirClick(Sender: TObject);
+begin
+
+End; // with
+
+
+procedure TForm_Insp1.BtnSalvarClick(Sender: TObject);
+begin
+    Qry_Inspeao1 .close;
+    Qry_Inspeao1.Parameters.ParamByName('Cod_Inspecao').Value := 'Codigo';
+    Qry_Inspeao1.open;
+    Qry_Inspeao1.Insert;
+end;
+
+procedure TForm_Insp1.Btn_sairClick(Sender: TObject);
+begin
+Close;
+end;
+
+procedure TForm_Insp1.DBGrid1DrawDataCell(Sender: TObject; const Rect: TRect;
+  Field: TField; State: TGridDrawState);
+begin
+
+ begin
+
+    Font.Color:=clRed;
+    Brush.Color:= clBlack;
+ end;
+end;
+
+procedure TForm_Insp1.FormShow(Sender: TObject);
+begin
+// Qry_Inspeao1.close;
+//  Qry_Inspeao1.Parameters.ParamByName('Cod_Inspecao').Value := Cod_Inspecao ;
+end;
+
+end.

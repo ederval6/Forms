@@ -1,0 +1,205 @@
+unit Unit_insp1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Data.DB,
+  Vcl.Buttons, Vcl.Grids, Vcl.DBGrids, Data.Win.ADODB, System.ImageList,
+  Vcl.ImgList, Vcl.Mask, Vcl.DBCtrls, Datasnap.DBClient;
+
+type
+  TForm_Insp1 = class(TForm)
+    Dts_Inspecao: TDataSource;
+    ADO_Inspecao: TADOQuery;
+    Panel1: TPanel;
+    DBGrid1: TDBGrid;
+    Panel2: TPanel;
+    Btn_Salvar: TBitBtn;
+    Btn_Alterar: TBitBtn;
+    Btn_Excluir: TBitBtn;
+    Btn_Inserir: TBitBtn;
+    Btn_Novo: TBitBtn;
+    Image1: TImage;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    ADO_InspecaoCod_Inspecao: TAutoIncField;
+    ADO_InspecaoInsp_Tproblemas: TStringField;
+    ADO_InspecaoInsp_Nproblema: TStringField;
+    ADO_InspecaoInsp_Cproblema: TStringField;
+    ADO_InspecaoInsp_Inspecionado: TStringField;
+    ADO_InspecaoInsp_Descricao: TStringField;
+    ADO_InspecaoInsp_checar: TStringField;
+    ADO_InspecaoInsp_Quantiade: TIntegerField;
+    ADO_InspecaoImag_descricao: TStringField;
+    Label10: TLabel;
+    Edt_Codigo: TDBEdit;
+    Cb_TProblemas: TComboBox;
+    Cb_Cproblemas: TComboBox;
+    Cb_Nproblemas: TComboBox;
+    Edt_Inspecionado: TEdit;
+    Edt_Descricao: TEdit;
+    Edt_Chec: TEdit;
+    Edt_Quantidade: TEdit;
+    Edt_Imagem: TEdit;
+    procedure Btn_sairClick(Sender: TObject);
+    procedure DBGrid1DrawDataCell(Sender: TObject; const Rect: TRect;
+      Field: TField; State: TGridDrawState);
+    procedure Db_tiposprobelmasChange(Sender: TObject);
+    procedure BtnSalvarClick(Sender: TObject);
+    procedure Btn_SalvarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Btn_NovoClick(Sender: TObject);
+    procedure Btn_AlterarClick(Sender: TObject);
+    procedure Btn_InserirClick(Sender: TObject);
+    procedure Btn_InserirEnter(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_Insp1: TForm_Insp1;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit_Logado, Unit_loguin, Unit_Menu, Unit_DM;
+
+procedure TForm_Insp1.BtnSalvarClick(Sender: TObject);
+begin
+ADO_Inspecao.Post;
+DM.DMConexao.CommitTrans;
+end;
+
+procedure TForm_Insp1.Btn_AlterarClick(Sender: TObject);
+begin
+ADO_Inspecao.edit;
+end;
+
+procedure TForm_Insp1.Btn_InserirClick(Sender: TObject);
+begin
+
+  dm.DMConexao.Connected := true;
+  ADO_Inspecao.Active := true;
+  ADO_Inspecao.Insert;
+  ADO_Inspecao.FieldByName('Insp_Tproblemas').AsString := Cb_TProblemas.Text;
+  ADO_Inspecao.FieldByName('Insp_Nproblema').AsString :=Cb_Nproblemas.Text;
+  ADO_Inspecao.FieldByName('Insp_Cproblema').AsString :=Cb_Cproblemas.Text;
+  ADO_Inspecao.FieldByName('Insp_Inspecionado').AsString := Edt_Inspecionado.Text;
+  ADO_Inspecao.FieldByName('Insp_Descricao').AsString := Edt_Descricao.Text;
+  ADO_Inspecao.FieldByName('Insp_checar').AsString:= Edt_Chec.Text;
+  ADO_Inspecao.FieldByName('Insp_Quantiade').AsInteger := StrToInt(Edt_Quantidade.Text) ;
+
+  ADO_Inspecao.FieldByName('Imag_descricao').AsString :=Edt_Imagem.Text;
+
+
+
+   ADO_Inspecao.post;
+ end;
+
+
+procedure TForm_Insp1.Btn_InserirEnter(Sender: TObject);
+begin
+// if Edt_Codigo.Text='' then
+// begin
+//
+//  ADO_Inspecao.Append;
+//
+// end;
+end;
+
+procedure TForm_Insp1.Btn_NovoClick(Sender: TObject);
+begin
+ADO_Inspecao.append;
+end;
+
+procedure TForm_Insp1.Btn_sairClick(Sender: TObject);
+begin
+Close;
+end;
+
+procedure TForm_Insp1.Btn_SalvarClick(Sender: TObject);
+begin
+ dm.DMConexao.Connected := true;
+ADO_Inspecao.Active := true;
+//ADO_Inspecao.FieldByName(' Cod_Inspecao').AsInteger := StrToInt(Edt_Codigo.Text) ;
+
+
+ADO_Inspecao.Post;
+ADO_Inspecao.Append;
+//ADO_Inspecao.FieldValues['Insp_Nproblema'].;
+//ADO_Inspecao.FieldValues['nome']:= DBEnome.Text;
+//ADO_Inspecao.FieldValues['naturalidade']:= DBEnatu.Text;
+//ADO_Inspecao.Post;
+ShowMessage('Cadastro salvo com Sucesso!');
+end;
+
+procedure TForm_Insp1.DBGrid1DrawDataCell(Sender: TObject; const Rect: TRect;
+  Field: TField; State: TGridDrawState);
+begin
+
+ begin
+
+    Font.Color:=clRed;
+    Brush.Color:= clBlack;
+ end;
+end;
+
+procedure TForm_Insp1.Db_tiposprobelmasChange(Sender: TObject);
+begin
+//Db_tiposprobelmas.Text:=ComboBox1.Text;
+end;
+
+procedure TForm_Insp1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+   ADO_Inspecao.close; // fechamos a conexão
+   ADO_Inspecao.close; // uma boa prática de programação: fechar as query´s abertas.
+end;
+
+procedure TForm_Insp1.FormCreate(Sender: TObject);
+begin
+//Edit1.Text := IntToStr(valor)
+end;
+
+procedure TForm_Insp1.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = VK_RETURN then
+  Perform(WM_NEXTDLGCTL,0,0);
+
+end;
+
+procedure TForm_Insp1.FormShow(Sender: TObject);
+begin
+
+
+// if not DM.DMConexao.Connected then // abre a conexão com o banco de dados
+// begin
+//   with ADO_Inspecao do
+//begin
+//    Close;
+//    SQL.Clear;
+//    SQL.Text := 'SELECT MAX(Cod_Inspecao) as Codico FROM Inspecao';
+//    Open;
+//    Edt_Codigo.Text := IntTostr(FieldByname('codigo').asInteger);
+//
+// end;
+// ADO_Inspecao.Open;
+// ADO_Inspecao.close; // já deveria estar fechada, mas se não estiver, nós a fechamos aqui;
+ //ADO_Inspecao.open;
+end;
+//end;
+
+end.

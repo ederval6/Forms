@@ -1,0 +1,105 @@
+unit Unit_Menu;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Vcl.StdCtrls,
+  Vcl.ComCtrls, Vcl.Menus;
+
+type
+  TForm_Menu = class(TForm)
+    Pnl_Menu: TPanel;
+    Pnl_menu_Lateral: TPanel;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
+    SpeedButton5: TSpeedButton;
+    Btninspecao1: TSpeedButton;
+    Btn_Menu: TSpeedButton;
+    SpeedButton7: TSpeedButton;
+    SpeedButton8: TSpeedButton;
+    Pnl_Status: TPanel;
+    Label1: TLabel;
+    StatusBar1: TStatusBar;
+    Pnl_subMenu: TPanel;
+    SpeedButton6: TSpeedButton;
+    SpeedButton9: TSpeedButton;
+    SpeedButton10: TSpeedButton;
+    Timer1: TTimer;
+    Pnl_Verde1: TPanel;
+    Label2: TLabel;
+    procedure Btn_MenuClick(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
+    procedure Btninspecao1Click(Sender: TObject);
+    procedure Pnl_MenuMouseEnter(Sender: TObject);
+    procedure Pnl_Verde1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_Menu: TForm_Menu;
+  Expandido:Boolean;//verificação se o menu é true ou false.
+
+implementation
+
+{$R *.dfm}
+
+uses Unit_loguin;
+
+
+
+procedure TForm_Menu.Btninspecao1Click(Sender: TObject);
+begin
+Pnl_subMenu.Visible:= not Pnl_subMenu.Visible;
+end;
+
+procedure TForm_Menu.Btn_MenuClick(Sender: TObject);
+begin
+
+  //Modificar a largura do menu.
+  if expandido then
+    Pnl_menu_Lateral.Width:= 41
+   else
+    Pnl_menu_Lateral.Width:=137;
+    expandido:=not expandido ;
+
+end;
+
+procedure TForm_Menu.FormCreate(Sender: TObject);
+begin
+   Pnl_Verde1.Visible:= not Pnl_Verde1.Visible;
+end;
+
+//Procedure CentralizarPanel(Form_loguin: TForm; Pnl_Menu: TPanel);
+//begin
+ // Pnl_Menu.Left := (Form_Menu.ClientWidth div 2) - (Pnl_Menu.Width div 2);
+//  Pnl_Menu.Top := (Form_Menu.ClientHeight div 2) - (Pnl_Menu.Height div 2);
+
+ // Pnl_Menu.Update;
+ // Form_Menu.Update;
+//end; */
+
+procedure TForm_Menu.Pnl_Verde1Click(Sender: TObject);
+begin
+Pnl_Verde1.Visible:= not Pnl_Verde1.Visible;
+end;
+
+procedure TForm_Menu.Pnl_MenuMouseEnter(Sender: TObject);
+begin
+ Pnl_subMenu.Visible:= false;
+end;
+
+procedure TForm_Menu.Timer1Timer(Sender: TObject);
+begin
+ StatusBar1.Panels[1].Text:= ' Data: ' +
+ FormatDateTime(' dddd, dd " de " mmmm " de " yyyy ',Now);
+ StatusBar1.Panels[2].Text:= ' Hora: '+(TimeToStr(Now));
+end;
+
+end.

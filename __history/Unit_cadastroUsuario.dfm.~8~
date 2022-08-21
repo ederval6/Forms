@@ -1,0 +1,234 @@
+object FrmCadusuario: TFrmCadusuario
+  Left = 0
+  Top = 0
+  Caption = 'Frm_Cadastrousuario'
+  ClientHeight = 510
+  ClientWidth = 763
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Pnl_cadastro: TPanel
+    Left = 0
+    Top = 0
+    Width = 763
+    Height = 510
+    Align = alBottom
+    Color = clSkyBlue
+    ParentBackground = False
+    TabOrder = 0
+    ExplicitWidth = 809
+    object Label1: TLabel
+      Left = 16
+      Top = 48
+      Width = 92
+      Height = 13
+      Caption = 'Codigo_funcionario'
+      FocusControl = Edt_Codigo
+    end
+    object Label2: TLabel
+      Left = 16
+      Top = 88
+      Width = 27
+      Height = 13
+      Caption = 'Nome'
+      FocusControl = Edt_nome
+    end
+    object Label3: TLabel
+      Left = 16
+      Top = 128
+      Width = 29
+      Height = 13
+      Caption = 'Cargo'
+      FocusControl = Edt_cargo
+    end
+    object Label4: TLabel
+      Left = 16
+      Top = 168
+      Width = 30
+      Height = 13
+      Caption = 'Senha'
+      FocusControl = Edt_senha
+    end
+    object Pnl_titulo_cad: TPanel
+      Left = 1
+      Top = 1
+      Width = 761
+      Height = 41
+      Align = alTop
+      Caption = 'Cadastro'
+      Color = clLime
+      ParentBackground = False
+      TabOrder = 0
+      ExplicitWidth = 807
+    end
+    object Btn_Alterar: TBitBtn
+      Left = 244
+      Top = 471
+      Width = 75
+      Height = 25
+      Caption = 'Alterar'
+      TabOrder = 1
+    end
+    object Btn_Gravar: TBitBtn
+      Left = 82
+      Top = 471
+      Width = 75
+      Height = 25
+      Caption = 'Gravar'
+      TabOrder = 2
+    end
+    object Btn_Cancelar: TBitBtn
+      Left = 163
+      Top = 471
+      Width = 75
+      Height = 25
+      Caption = 'Cancelar'
+      TabOrder = 3
+    end
+    object Btn_Novo: TBitBtn
+      Left = 1
+      Top = 471
+      Width = 75
+      Height = 25
+      Caption = 'Novo'
+      TabOrder = 4
+      OnClick = Btn_NovoClick
+    end
+    object Btn_Apagar: TBitBtn
+      Left = 325
+      Top = 471
+      Width = 75
+      Height = 25
+      Caption = 'Apagar'
+      TabOrder = 5
+    end
+    object Btn_Fechar: TBitBtn
+      Left = 686
+      Top = 471
+      Width = 75
+      Height = 25
+      Caption = 'Fechar'
+      TabOrder = 6
+    end
+    object DBGrid1: TDBGrid
+      Left = 1
+      Top = 280
+      Width = 760
+      Height = 185
+      DataSource = DsListagem
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick, dgTitleHotTrack]
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = False
+      TabOrder = 7
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'Cod_func'
+          Title.Caption = 'C'#243'digo'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'Arial Black'
+          Title.Font.Style = []
+          Width = 81
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Nome'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'Arial Black'
+          Title.Font.Style = []
+          Width = 238
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Cargo'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'Arial Black'
+          Title.Font.Style = []
+          Width = 222
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Senha'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'Arial Black'
+          Title.Font.Style = []
+          Width = 162
+          Visible = True
+        end>
+    end
+    object Edt_Codigo: TDBEdit
+      Left = 16
+      Top = 64
+      Width = 81
+      Height = 21
+      DataField = 'Cod_func'
+      DataSource = DsListagem
+      ReadOnly = True
+      TabOrder = 8
+      OnChange = Edt_CodigoChange
+    end
+    object Edt_nome: TDBEdit
+      Left = 16
+      Top = 104
+      Width = 654
+      Height = 21
+      DataField = 'Nome'
+      DataSource = DsListagem
+      TabOrder = 9
+    end
+    object Edt_cargo: TDBEdit
+      Left = 16
+      Top = 144
+      Width = 654
+      Height = 21
+      DataField = 'Cargo'
+      DataSource = DsListagem
+      TabOrder = 10
+    end
+    object Edt_senha: TDBEdit
+      Left = 16
+      Top = 184
+      Width = 134
+      Height = 21
+      DataField = 'Senha'
+      DataSource = DsListagem
+      PasswordChar = '#'
+      TabOrder = 11
+    end
+  end
+  object DsListagem: TDataSource
+    DataSet = DM.Qry_Listagem
+    Left = 720
+    Top = 112
+  end
+end

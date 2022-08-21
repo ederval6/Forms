@@ -1,0 +1,43 @@
+object UFrm_Historico: TUFrm_Historico
+  Left = 0
+  Top = 0
+  Caption = 'Frm_Historico'
+  ClientHeight = 711
+  ClientWidth = 1234
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Pnl_1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1234
+    Height = 41
+    Align = alTop
+    Color = clTeal
+    ParentBackground = False
+    TabOrder = 0
+    ExplicitLeft = 176
+    ExplicitWidth = 185
+  end
+  object Pnl_Central: TPanel
+    Left = 0
+    Top = 41
+    Width = 1234
+    Height = 670
+    Align = alClient
+    Color = clGrayText
+    ParentBackground = False
+    TabOrder = 1
+    ExplicitLeft = 248
+    ExplicitTop = 152
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+  end
+end

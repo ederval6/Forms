@@ -1,0 +1,61 @@
+unit Unit_Historico;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.Mask, Vcl.DBCtrls;
+
+type
+  TUFrm_Historico = class(TForm)
+    Pnl_1: TPanel;
+    Pnl_Central: TPanel;
+    DBGrid1: TDBGrid;
+    Btn_Inserir: TBitBtn;
+    Btn_Gravar: TBitBtn;
+    Btn_Alterar: TBitBtn;
+    Btn_Excluir: TBitBtn;
+    Btn_Sair: TBitBtn;
+    Ds_Historico: TDataSource;
+    Label1: TLabel;
+    Edt_CodModelo: TDBEdit;
+    Label2: TLabel;
+    Edt_CodFunc: TDBEdit;
+    Label3: TLabel;
+    Edt_Cargo: TDBEdit;
+    Label4: TLabel;
+    Edt_ModDecr: TDBEdit;
+    Label5: TLabel;
+    Edt_Nome: TDBEdit;
+    Label6: TLabel;
+    Edt_Data: TDBEdit;
+    Label7: TLabel;
+    Edt_Finalizar: TDBEdit;
+    Label8: TLabel;
+    Edt_Historico: TDBEdit;
+    Label9: TLabel;
+    Edt_Hora: TDBEdit;
+    Btn_Fechar: TBitBtn;
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  UFrm_Historico: TUFrm_Historico;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit_DM, Unit_insp1, Unit_Logado, Unit_loguin, Unit_Menu;
+
+procedure TUFrm_Historico.FormShow(Sender: TObject);
+begin
+  DM.Ado_Historico.open;
+end;
+
+end.

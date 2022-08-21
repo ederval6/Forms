@@ -1,0 +1,130 @@
+unit Unit_insp1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Data.DB,
+  Vcl.Buttons, Vcl.Grids, Vcl.DBGrids, Data.Win.ADODB, System.ImageList,
+  Vcl.ImgList, Vcl.Mask, Vcl.DBCtrls;
+
+type
+  TForm_Insp1 = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Label3: TLabel;
+    Panel3: TPanel;
+    Panel4: TPanel;
+    Rd_Chassis: TRadioGroup;
+    Rd_bomba: TRadioGroup;
+    Rd_Pintura: TRadioGroup;
+    RadioGroup1: TRadioGroup;
+    ComboBox1: TComboBox;
+    Label1: TLabel;
+    ComboBox2: TComboBox;
+    Label2: TLabel;
+    ComboBox3: TComboBox;
+    Label4: TLabel;
+    Panel5: TPanel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Descrição: TLabel;
+    Pnl_imagem: TPanel;
+    DBGrid1: TDBGrid;
+    BtnInserir: TBitBtn;
+    Panel7: TPanel;
+    BtnAlterar: TBitBtn;
+    BtnExcluir: TBitBtn;
+    BtnProxima: TBitBtn;
+    Label8: TLabel;
+    BtnVoltar: TBitBtn;
+    Label10: TLabel;
+    BtnLimpar: TBitBtn;
+    BtnAdicionar: TBitBtn;
+    BtnSalvar: TBitBtn;
+    Pnl_porcentagem: TPanel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Edt_pendente: TEdit;
+    Edt_Retrabalhados: TEdit;
+    Btn_Novo: TBitBtn;
+    Btn_sair: TBitBtn;
+    Label14: TLabel;
+    Cb_Filtro: TComboBox;
+    Dts_Inspecao: TDataSource;
+    ADO_Inspecao: TADOQuery;
+    ADO_InspecaoCod_Inspecao: TAutoIncField;
+    ADO_InspecaoId_Imagem: TIntegerField;
+    ADO_InspecaoID_func: TIntegerField;
+    ADO_InspecaoID_inicio: TIntegerField;
+    ADO_InspecaoInsp_Tproblemas: TStringField;
+    ADO_InspecaoInsp_Nproblema: TStringField;
+    ADO_InspecaoInsp_Cproblema: TStringField;
+    ADO_InspecaoInsp_Inspecionado: TStringField;
+    ADO_InspecaoInsp_Descricao: TStringField;
+    ADO_InspecaoInsp_Checar: TStringField;
+    ADO_InspecaoInsp_Quantiade: TIntegerField;
+    ADO_InspecaoInsp_Modificado: TStringField;
+    ImageList1: TImageList;
+    Db_tiposprobelmas: TDBEdit;
+    Db_causadorproblemas: TDBEdit;
+    Db_niveisproblemas: TDBEdit;
+    Db_descriao: TDBEdit;
+    Panel6: TPanel;
+    Label9: TLabel;
+    procedure Btn_sairClick(Sender: TObject);
+    procedure DBGrid1DrawDataCell(Sender: TObject; const Rect: TRect;
+      Field: TField; State: TGridDrawState);
+    procedure BtnInserirClick(Sender: TObject);
+    procedure Db_tiposprobelmasChange(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_Insp1: TForm_Insp1;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit_Logado, Unit_loguin, Unit_Menu, Unit_DM;
+
+procedure TForm_Insp1.BtnInserirClick(Sender: TObject);
+begin
+With ADO_Inspecao do Begin
+  if active then close;
+  case Rd_Chassis.itemindex of
+     0: SQL.Text := 'Select * from Inspecao ';
+//
+  End;//Case
+  Open; // Abrir query
+End; // with
+end;
+
+procedure TForm_Insp1.Btn_sairClick(Sender: TObject);
+begin
+Close;
+end;
+
+procedure TForm_Insp1.DBGrid1DrawDataCell(Sender: TObject; const Rect: TRect;
+  Field: TField; State: TGridDrawState);
+begin
+
+ begin
+
+    Font.Color:=clRed;
+    Brush.Color:= clBlack;
+ end;
+end;
+
+procedure TForm_Insp1.Db_tiposprobelmasChange(Sender: TObject);
+begin
+Db_tiposprobelmas.Text:=ComboBox1.Text;
+end;
+
+end.

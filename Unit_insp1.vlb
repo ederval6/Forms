@@ -1,0 +1,6 @@
+﻿[Dts_Inspecao]
+LayerNames=" select* from  Inspecao"
+
+[Module Settings]
+ModelLayerNames=" select* from  Inspecao"
+
